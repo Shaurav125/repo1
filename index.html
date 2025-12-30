@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dr. Mithilesh Kumar - Pain Specialist</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              // Core Brand (Hero & Navbar)
+              primary: '#0056D2', // Royal Blue
+              secondary: '#00205B', // Deep Navy
+              
+              // Section Specific Palettes
+              'medical-teal': '#0d9488', // Treatments (Teal-600)
+              'medical-teal-dark': '#115e59', // Teal-800
+              'medical-bg-teal': '#f0fdfa', // Teal-50
+              
+              'trust-blue': '#38bdf8', // Testimonials Accent (Sky-400)
+              'trust-dark': '#0f172a', // Testimonials BG (Slate-900)
+              
+              'action-amber': '#f59e0b', // Buttons/Highlights (Amber-500)
+              
+              accent: '#F8FAFC', // Slate-50
+            },
+            animation: {
+              'spin-slow': 'spin 8s linear infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        /* Remove default scroll behavior to let Lenis handle it */
+        scroll-behavior: auto !important; 
+      }
+      
+      /* Lenis Recommended CSS */
+      html.lenis, html.lenis body {
+        height: auto;
+      }
+      
+      .lenis.lenis-smooth {
+        scroll-behavior: auto !important;
+      }
+      
+      .lenis.lenis-smooth [data-lenis-prevent] {
+        overscroll-behavior: contain;
+      }
+      
+      .lenis.lenis-stopped {
+        overflow: hidden;
+      }
+      
+      .lenis.lenis-scrolling iframe {
+        pointer-events: none;
+      }
+
+      /* Hide scrollbar for clean UI in specific areas if needed */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* === Advanced CSS Animations === */
+      
+      /* 1. Float Animation */
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0px); }
+      }
+      .animate-float {
+        animation: float 5s ease-in-out infinite;
+      }
+
+      /* 2. Pulse Glow Animation */
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 0 0 rgba(0, 86, 210, 0.4); }
+        50% { box-shadow: 0 0 0 12px rgba(0, 86, 210, 0); }
+      }
+      .animate-pulse-glow {
+        animation: pulse-glow 2s infinite;
+      }
+
+      /* 3. Gradient Text Animation */
+      @keyframes gradient-x {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      .animate-gradient-text {
+        background: linear-gradient(to right, #0056D2, #3b82f6, #0056D2);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: gradient-x 3s linear infinite;
+      }
+      
+      /* Teal Gradient Text */
+      .animate-gradient-teal {
+        background: linear-gradient(to right, #0d9488, #2dd4bf, #0d9488);
+        background-size: 200% auto;
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        animation: gradient-x 3s linear infinite;
+      }
+
+      /* 4. Live Dot Blink */
+      @keyframes blink {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.5; transform: scale(0.8); }
+      }
+      .animate-blink {
+        animation: blink 2s ease-in-out infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "gsap/": "https://esm.sh/gsap@^3.14.2/",
+    "gsap": "https://esm.sh/gsap@^3.14.2",
+    "lenis": "https://esm.sh/lenis@1.1.20"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
